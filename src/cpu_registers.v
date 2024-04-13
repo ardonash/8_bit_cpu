@@ -9,7 +9,7 @@ reg [3:0] RAM[7:0];
 always @(posedge clk) begin
     if (!rst) begin
       out <= 4'b0;
-      for (int i = 0; i < (size); i++) begin
+      for (int i = 0; i < (8); i++) begin
         RAM[i] <= 4'b0;
       end
     end else begin
