@@ -41,22 +41,22 @@ alu u_alu (
 );
 
 
-always @(posedge clk)begin
-    case(PC_Inst)
-    2'b00: //Loading of Instruction + Input Registers
-    2'b01: //Execution of Instruction Set
-    2'b10: //Output of Results
-    2'b11: //Idle where we wait for rst or maintain output
-    endcase
-end
-always @(*)begin
-    case(PC_Inst)
-    2'b00: //Loading of Instruction + Input Registers
+// always @(posedge clk)begin
+//     case(PC_Inst)
+//     2'b00: //Loading of Instruction + Input Registers
+//     2'b01: //Execution of Instruction Set
+//     2'b10: //Output of Results
+//     2'b11: //Idle where we wait for rst or maintain output
+//     endcase
+// end
+// always @(*)begin
+//     case(PC_Inst)
+//     2'b00: //Loading of Instruction + Input Registers
         
-    2'b01: //Execution of Instruction Set
-    2'b10: //Output of Results
-    2'b11: //Idle where we wait for rst or maintain output
-    endcase
-end
+//     2'b01: //Execution of Instruction Set
+//     2'b10: //Output of Results
+//     2'b11: //Idle where we wait for rst or maintain output
+//     endcase
+// end
 
 endmodule
