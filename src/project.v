@@ -15,13 +15,18 @@ module tt_um_example (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
+
 alu u_alu (
   .clk    (clk),  // input, wire, 
   .en     (ena),  // input, wire, 
   .opcode (uio_in[7:5]),  // input, wire [2:0], 
   .in_1   (ui_in[7:4]),  // input, wire [3:0], 
   .in_2   (ui_in[3:0]),  // input, wire [3:0], 
-  .out    (uo_out[7:4] )   // output, wire [3:0], 
+  .out    (uo_out[7:4])   // output, wire [3:0], 
 );
+
+assign uo_out [3:0] = 3'b000;
+assign uio_oe  = 0;
+assign uio_out =0;
 
 endmodule
