@@ -18,9 +18,3 @@ The project essentially works to take in two 4 bit inputs and a set of 3 bit ins
 Explain how to use your project
 
 To test the project you need to input the bit by bit register values and instructions.
-
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
-
-No external hardware 

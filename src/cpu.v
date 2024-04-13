@@ -9,6 +9,8 @@ module cpu(
     input wire inst_addr,
     input wire wr_en,
     input wire reg_addr,
+    input wire op_addr_1,
+    input wire op_addr_2,
     
     output wire reg_out,
     output wire inst_out,
@@ -31,6 +33,15 @@ cpu_registers inst_mem (
     .out    (inst_out)   // output, wire [3:0], 
 );
 
+alu u_alu (
+    .clk    (clk),  // input, wire, 
+    .en     (en),
+    .opcode (opcode),  // input, wire [2:0], 
+    .in_1   (in_1),  // input, wire [3:0], 
+    .in_2   (in_2),  // input, wire [3:0], 
+    .out    (out)   // output, wire [3:0], 
+);
+
 
 always @(posedge clk)begin
     case(PC_Inst)
@@ -39,8 +50,11 @@ always @(posedge clk)begin
         inst_wr_en<=1'b1;
         reg_in <= in_1;
         reg_addr <= 0;
-
+        #10
+        reg_in <= in_2; 
+        reg_addr <=1;
     2'b01: //Execution of Instruction Set
+
     2'b10: //Output of Results
     2'b11: //Idle where we wait for rst or maintain output
     endcase
