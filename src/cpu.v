@@ -18,7 +18,6 @@ module cpu(
 );
 cpu_registers registers(
     .wr_en  (wr_en),  // input, wire, 
-    .size   (3),  // input, wire, 
     .rst    (rst),  // input, wire, 
     .addr   (reg_addr),  // input, wire, 
     .in     (reg_in),  // input, wire [3:0], 
@@ -26,7 +25,6 @@ cpu_registers registers(
 );
 cpu_registers inst_mem (
     .wr_en  (inst_wr_en),  // input, wire, 
-    .size   (16),  // input, wire, 
     .rst    (rst),  // input, wire, 
     .addr   (inst_addr),  // input, wire, 
     .in     (inst_in),  // input, wire [3:0], 
