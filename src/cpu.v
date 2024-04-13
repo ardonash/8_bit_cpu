@@ -44,15 +44,7 @@ alu u_alu (
 always @(posedge clk)begin
     case(PC_Inst)
     2'b00: //Loading of Instruction + Input Registers
-        wr_en<= 1'b1;
-        inst_wr_en<=1'b1;
-        reg_in <= in_1;
-        reg_addr <= 0;
-        #10
-        reg_in <= in_2; 
-        reg_addr <=1;
     2'b01: //Execution of Instruction Set
-
     2'b10: //Output of Results
     2'b11: //Idle where we wait for rst or maintain output
     endcase

@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "8_bit_pseudo_cput"      # Project title
+  title:        "Small_CPU"      # Project title
   author:       "Ardo Nashalian"      # Your name
   discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "A simple cpu that takes in two 4 bit inputs and a set of instructions and executes them"      # One line description of what your project does
