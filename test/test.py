@@ -30,4 +30,5 @@ async def test_project(dut):
 
   await ClockCycles(dut.clk, 1)
 
+  dut._log.info(dut.uo_out.value)
   assert dut.uo_out.value == 3
