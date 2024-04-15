@@ -4,7 +4,7 @@ module alu(
     input wire [7:0] opcode,
     input wire [3:0] in_1,
     input wire [3:0] in_2,
-    output reg [7:0] out
+    output reg [3:0] out
 );
  
 always @(posedge clk) begin
