@@ -10,21 +10,21 @@ module alu(
 always @(posedge clk) begin
     if (en) begin
         case (opcode) 
-        3'b000: //Forward of first input
+        8'b00000000: //Forward of first input
             out = in_1;
-        3'b001: // Addition
+        8'b00000001: // Addition
             out = in_1 + in_2; 
-        3'b010: // Subtraction
+        8'b00000010: // Subtraction
             out = in_1 - in_2;
-        3'b011: // Logical NOT of first input
+        8'b00000011: // Logical NOT of first input
             out = ~in_1;
-        3'b100: //Logical OR 
+        8'b00000100: //Logical OR 
             out = in_1 | in_2;
-        3'b101: //Logical AND
+        8'b00000101: //Logical AND
             out = in_1 & in_2;
-        3'b110: //Logical XOR
+        8'b00000110: //Logical XOR
             out = in_1 ^ in_2;
-        3'b111: //left shift by two
+        8'b00000111: //left shift by two
             out = in_1<<2 ;
         endcase
     end
