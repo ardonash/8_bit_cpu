@@ -2,8 +2,8 @@ module alu(
     input wire clk,
     input wire en,
     input wire [7:0] opcode,
-    input wire [7:0] in_1,
-    input wire [7:0] in_2,
+    input wire [3:0] in_1,
+    input wire [3:0] in_2,
     output reg [7:0] out
 );
  
